@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args) {
         search();
         addNumber();
-
+        searchAgain();
     }
 
     private static void search() {
-        Set<Integer> set = new HashSet<Integer>(numbers);
+        Set<Integer> set = new HashSet<>(numbers);
         for (Integer r : set) {
             System.out.println(r + " - " + Collections.frequency(numbers, r));
         }
@@ -21,13 +21,23 @@ public class Main {
 
 
     private static void addNumber() {
-        Set<Integer> set = new HashSet<Integer>(numbers);
+        Set<Integer> set = new HashSet<>(numbers);
 
         Scanner scanner = new Scanner(System.in);
         int newNumber = scanner.nextInt();
         numbers.add(newNumber);
+        System.out.println(" ");
         System.out.println(numbers);
+        System.out.println(" ");
     }
+    private static void searchAgain() {
+        Set<Integer> set = new HashSet<>(numbers);
+        for (Integer r : set) {
+
+            System.out.println(r + " - " + Collections.frequency(numbers, r));
+        }
+    }
+
 }
 
 
